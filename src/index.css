@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "ATCArquette Bold";
+  src: url("../public/font/ATCArquette-Bold.ttf");
+}
+
+@font-face {
+  font-family: "ATCArquette Light";
+  src: url("../public/font/ATCArquette-Light.ttf");
+}
+
+@font-face {
+  font-family: "ATCArquette Medium";
+  src: url("../public/font/ATCArquette-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ATCArquette Regular";
+  src: url("../public/font/ATCArquette-Regular.ttf");
+}

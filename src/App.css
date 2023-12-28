@@ -1,38 +1,169 @@
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #008e9a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-header{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.content-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+}
+
+.info_weather{
+  border: 1px solid #FFF;
+  margin-top: 33.5px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.line{
+  height: 100%;
+  border: 1px solid #FFF ;
+}
+
+.content-right {
+  display: flex;
+  max-height: 100vh;
+  width: 50%;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+h1 {
+  font-family: "ATCArquette Bold";
+  font-size: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  font-family: "ATCArquette Regular";
+  font-size: 30px;
+  color: #FFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bouton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
+
+input {
+  height: 52px;
+  width: auto;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 0.5px;
+  font-size: 20px;
+}
+
+.btn-epic {
+  position: relative;
+  margin: auto;
+  width: 200px;
+  max-width: 260px;
+  height: 52px;
+  background: #fff;
+  transform: translate3d(0px, 0%, 0px);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  transition-delay: 0.6s;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.btn-epic:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #008e9a;
+  border-radius: 50% 50% 0 0;
+  transform: translateY(100%) scaleY(0.5);
+  transition: all 0.6s ease;
+}
+
+.btn-epic:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition: all 0.6s ease;
+}
+
+.btn-epic div {
+  position: relative;
+  top: 16px;
+  width: 100%;
+  height: 26px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.btn-epic span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-epic span:first-child {
+  color: white;
+  transform: translateY(24px);
+}
+
+.btn-epic span:last-child {
+  color: #1e0f21;
+  transform: translateY(0);
+}
+
+.btn-epic:hover {
+  background: #008e9a;
+  transition: background 0.2s linear;
+  transition-delay: 0.6s;
+}
+
+.btn-epic:hover:after {
+  border-radius: 0 0 50% 50%;
+  transform: translateY(-100%) scaleY(0.5);
+  transition-delay: 0;
+}
+
+.btn-epic:hover:before {
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition-delay: 0;
+}
+
+.btn-epic:hover span:first-child {
+  transform: translateY(0);
+}
+
+.btn-epic:hover span:last-child {
+  transform: translateY(-24px);
+}
+
