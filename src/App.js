@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import { width } from "@mui/system";
+
 
 const api = {
   key: "7300b205f64c52e1e9827771f4453b55",
@@ -22,6 +22,7 @@ function App() {
       .then((result) => {
         console.log(result);
         setWeather(result);
+        setSearch("");
       });
 
     fetch(`${api2.base}?query=${search}&per_page=1`, {
@@ -71,6 +72,7 @@ function App() {
             <div className="myImage">
               <img
                 src={background.photos[0].src.portrait}
+                alt={background.photos[0].alt}
                 style={{ objectFit: "cover", maxHeight: "100vh", maxWidth:"100%" }}
               />
             </div>
