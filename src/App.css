@@ -5,7 +5,7 @@
   background: #008e9a;
 }
 
-.App-header{
+.App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +20,8 @@
   flex-direction: column;
 }
 
-.info_weather{
-  border: 1px solid #FFF;
+.info_weather {
+  border: 1px solid #fff;
   margin-top: 33.5px;
   padding: 20px;
   border-radius: 10px;
@@ -29,9 +29,9 @@
   gap: 30px;
 }
 
-.line{
+.line {
   height: 100%;
-  border: 1px solid #FFF ;
+  border: 1px solid #fff;
 }
 
 .content-right {
@@ -51,7 +51,7 @@ h1 {
 p {
   font-family: "ATCArquette Regular";
   font-size: 30px;
-  color: #FFF;
+  color: #fff;
 }
 
 .bouton {
@@ -167,3 +167,74 @@ input {
   transform: translateY(-24px);
 }
 
+@media screen and (max-width: 1000px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    height: 63%;
+    width: auto;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 0.5px;
+    font-size: 20px;
+  }
+
+  .content-left {
+    display: flex;
+    width: 100%;
+  }
+  .content-right {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .myImage {
+    text-align: center; /* Pour centrer horizontalement le contenu à l'intérieur de .myImage */
+  }
+
+  .myImage img {
+    align-self: center; /* Pour centrer verticalement l'image à l'intérieur de .myImage */
+    object-fit: cover;
+    max-height: 100%; /* Ajustez selon vos besoins */
+    max-width: 100%; /* Ajustez selon vos besoins */
+  }
+
+  .bouton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .btn-epic {
+    position: relative;
+    margin: auto;
+    width: 200px;
+    max-width: 260px;
+    height: 76px;
+    background: #fff;
+    transform: translate3d(0px, 0%, 0px);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    transition-delay: 0.6s;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+}
